@@ -21,10 +21,15 @@ void load_script(const char* filename, bool show_script = false){
     FILE* f = nullptr;
     try{
         f = fopen(filename, "rb");
+        if (filename == nullptr || (!*filename)){
+            cerr << "Error: el archivo no tiene nombre " << endl;
+            return;
+        }
         if(!f){
             cerr << "Error: no se pudo abrir el archivo " << filename << endl;
             return;
         }
+
 
         int c;
         char buf[4001];
