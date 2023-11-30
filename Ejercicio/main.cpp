@@ -55,6 +55,9 @@ void load_script(const char* filename, bool show_script = false){
     }
 }
 int main() {
-    load_script("script.txt", true);
+    char filename[500];
+    cout << "Archivo: ";
+    cin >> filename;
+    load_script(filename, true);
     return 0;
 }
