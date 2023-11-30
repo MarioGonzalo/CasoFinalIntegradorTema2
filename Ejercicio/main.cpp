@@ -9,6 +9,13 @@ struct ColorConsole{
     static constexpr auto bg_white = "\033[47m";
 };
 
+struct ConsoleBox{
+    void new_text(){/*...*/}
+    void set_text(const string &text){cout << text << endl; }
+};
+
+ConsoleBox *consoleBox = new ConsoleBox;
+
 int main() {
     std::cout << "Hello, World!" << std::endl;
     return 0;
