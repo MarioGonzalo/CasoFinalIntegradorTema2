@@ -42,9 +42,14 @@ void load_script(const char* filename, bool show_script = false){
         consoleBox->new_text();
         consoleBox->set_text(script);
     }
-    
+
+    catch(...){
+        cerr << "Error: no de la lectura del archivo " << filename << endl;
+        if(f)
+            fclose(f);
+    }
 }
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    load_script("script.txt", true);
     return 0;
 }
