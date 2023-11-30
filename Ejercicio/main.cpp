@@ -16,6 +16,17 @@ struct ConsoleBox{
 
 ConsoleBox *consoleBox = new ConsoleBox;
 
+void load_script(const char* filename, bool show_script = false){
+    string script;
+    FILE* f = nullptr;
+    try{
+        f = fopen(filename, "rb");
+        if(!f){
+            cerr << "Error: no se pudo abrir el archivo " << filename << endl;
+            return;
+        }
+    }
+}
 int main() {
     std::cout << "Hello, World!" << std::endl;
     return 0;
