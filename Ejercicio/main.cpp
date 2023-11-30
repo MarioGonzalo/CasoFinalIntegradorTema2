@@ -49,7 +49,7 @@ void load_script(const char* filename, bool show_script = false){
     }
 
     catch(...){
-        cerr << "Error: no de la lectura del archivo " << filename << endl;
+        cerr << "Error: fallo durante la lectura del archivo " << filename << endl;
         if(f)
             fclose(f);
     }
